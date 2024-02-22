@@ -3,7 +3,8 @@
   background-color: transparent;
   padding: 4px 10px;
   display: inline-block;
-  border-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   box-shadow: 5px 5px 5px #ccc;
   min-width: 400px;
   cursor: pointer;
@@ -19,15 +20,16 @@
   .dropdown {
     display: none;
     position: absolute;
-    width: 500px;
+    width: 100%;
     min-height: 100px;
     overflow: auto;
     max-height: 400px;
     box-shadow: 5px 5px 5px #ccc;
     background: white;
-    border-radius: 10px;
-    top: 105%;
-    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    top: 100%;
+    left: -1px;
     border: 1px solid #ccc;
 
     ul {
@@ -51,9 +53,6 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
 }
