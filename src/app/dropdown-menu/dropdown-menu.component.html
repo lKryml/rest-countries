@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="btn">
+    <div class="btn-info" (click)="dropdownActive = true">
+      {{ selectedOption?.name || "Select an Option" }}
+      <span *ngIf="selectedOption" (click)="selectedOption = undefined">x</span>
+    </div>
+
+    <div class="dropdown" [ngClass]="{ active: dropdownActive }">
+      <ul>
+        <li *ngFor="let option of options">
+          <a
+            href="#"
+            (click)="selectedOption = option; dropdownActive = false"
+            >{{ option.name }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
