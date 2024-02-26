@@ -6,6 +6,12 @@ input {
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+}
+select {
+  width: 200px;
+  height: 30px;
+  padding-left: 25px;
+  background: white;
+  border: 1px gray solid;
 }
