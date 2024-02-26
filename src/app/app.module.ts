@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { CountryCardComponent } from './country-card/country-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CountryCardComponent } from './country-card/country-card.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
