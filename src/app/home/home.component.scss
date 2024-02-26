@@ -1,17 +1,20 @@
 input {
   height: 30px;
   padding-left: 25px;
+  box-shadow: 5px 5px 5px gray;
+  border: none;
 }
 .container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  margin-bottom: 40px;
   justify-content: space-between;
+  margin-top: 50px;
 }
 select {
   width: 200px;
   height: 30px;
   padding-left: 25px;
   background: white;
-  border: 1px gray solid;
+  border: none;
+  box-shadow: 5px 5px 5px gray;
 }

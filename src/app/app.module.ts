@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { CountryCardComponent } from './country-card/country-card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
     HomeComponent,
     NavbarComponent,
     DropdownMenuComponent,
+    CountryCardComponent,
   ],
   imports: [
     BrowserModule,
