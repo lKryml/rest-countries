@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { CountryCardComponent } from './country-card/country-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountryDetailsComponent } from './country-details/country-details.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     DropdownMenuComponent,
     CountryCardComponent,
+    CountryDetailsComponent,
   ],
   imports: [
     BrowserModule,
