@@ -1,12 +1,12 @@
 <app-navbar></app-navbar>
-<button>Back</button>
+<button [routerLink]="'/'">Back</button>
 <div class="container">
   <img [src]="country.flags.png" />
   <div class="info-container">
     <h1>{{ country.name.common }}</h1>
     <div class="paragraph-container">
       <div class="col1">
-        <p>Native name: {{ country.name.nativeName.eng.official }}</p>
+        <p>Native name: {{ nativeName }}</p>
         <p>Population: {{ country.population }}</p>
         <p>Region: {{ country.region }}</p>
         <p>Subregion: {{ country.subregion }}</p>
