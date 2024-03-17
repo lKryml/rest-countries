@@ -22,6 +22,7 @@ export class CountryDetailsComponent {
         Object.values(this.country.name.nativeName)[0] as any
       ).common;
       console.log(this.country);
+      console.log(this.country.flags.png);
     });
   }
 }
