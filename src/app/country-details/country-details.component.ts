@@ -1,28 +1,36 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CountryService } from '../country.service';
-
+import Country from '../country';
+import { Subscription, take } from 'rxjs';
 @Component({
   selector: 'app-country-details',
   templateUrl: './country-details.component.html',
   styleUrls: ['./country-details.component.scss'],
 })
-export class CountryDetailsComponent {
+export class CountryDetailsComponent implements OnInit, OnDestroy {
   route: ActivatedRoute = inject(ActivatedRoute);
-  country: any;
+  country!: Country;
   currency: any;
   nativeName: any;
-  constructor(private countryService: CountryService) {
+  private subscription?: Subscription;
+  constructor(private countryService: CountryService) {}
+  ngOnInit(): void {
     const countryName = this.route.snapshot.params['name'];
-
-    this.countryService.getCountryByName(countryName).subscribe((data) => {
-      this.country = data[0];
-      this.currency = Object.keys(this.country.currencies)[0];
-      this.nativeName = (
-        Object.values(this.country.name.nativeName)[0] as any
-      ).common;
-      console.log(this.country);
-      console.log(this.country.flags.png);
-    });
+    this.subscription = this.countryService
+      .getCountryByName(countryName)
+      .pipe(take(1))
+      .subscribe((data) => {
+        this.country = data[0];
+        this.currency = Object.keys(this.country.currencies)[0];
+        this.nativeName = (
+          Object.values(this.country.name.nativeName)[0] as any
+        ).common;
+      });
+  }
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }
