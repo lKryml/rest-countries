@@ -10,7 +10,8 @@ import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
 import { CountryCardComponent } from './country-card/country-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CountryDetailsComponent } from './country-details/country-details.component';
-
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
     DropdownMenuComponent,
     CountryCardComponent,
     CountryDetailsComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +28,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
     BrowserAnimationsModule,
     MatSlideToggleModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -10,12 +10,16 @@ import { Subscription } from 'rxjs';
 export class CountryCardComponent implements OnInit, OnDestroy {
   private subscription?: Subscription;
   constructor(private countryService: CountryService) {}
-
+  searchValue: string = '';
   countries: any;
 
   ngOnInit(): void {
     this.subscription = this.countryService.getData().subscribe((val: any) => {
       this.countries = val;
+
+      for (let c of this.countries) {
+        console.log(c.name.common);
+      }
     });
   }
 

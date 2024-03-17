@@ -1,5 +1,22 @@
 <div class="container">
-  <div class="card-container" *ngFor="let country of countries">
+  <input
+    type="text"
+    for="search-box"
+    placeholder="Search for a country.."
+    name="search-box"
+    [(ngModel)]="searchValue"
+  />
+  <select>
+    <option value="">Filter by</option>
+    <option value="region">Region</option>
+    <option value="name">Name</option>
+  </select>
+</div>
+<div class="container">
+  <div
+    class="card-container"
+    *ngFor="let country of countries | filter : searchValue"
+  >
     <img src="{{ country.flags.png }}" />
     <h2>{{ country.name.common }}</h2>
     <p>Population:{{ country.population }}</p>
