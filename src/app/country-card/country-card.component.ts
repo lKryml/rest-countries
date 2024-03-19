@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CountryService } from '../country.service';
-import { Subscription } from 'rxjs';
+import { Subscription, of } from 'rxjs';
 
 @Component({
   selector: 'app-country-card',
