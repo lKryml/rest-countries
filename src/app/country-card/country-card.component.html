@@ -6,10 +6,10 @@
     name="search-box"
     [(ngModel)]="searchValue"
   />
-  <select>
+  <select [(ngModel)]="regionValue">
     <option value="">Filter by region</option>
     <option value="Africa">Africa</option>
-    <option value="America">America</option>
+    <option value="Americas">Americas</option>
     <option value="Asia">Asia</option>
     <option value="Europe">Europe</option>
     <option value="Oceania">Oceania</option>
@@ -18,7 +18,7 @@
 <div class="container">
   <div
     class="card-container"
-    *ngFor="let country of countries | filter : searchValue"
+    *ngFor="let country of countries | filter : searchValue : regionValue"
   >
     <img src="{{ country.flags.png }}" />
     <h2>{{ country.name.common }}</h2>

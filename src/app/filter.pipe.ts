@@ -5,11 +5,20 @@ import Country from './country';
   name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
-  transform(data: Country[], searchInput: string): any {
+  transform(data: Country[], searchInput: string, region: string): any {
     return data?.filter((country) => {
-      return country.name.common
-        .toLowerCase()
-        .includes(searchInput.toLowerCase());
+      console.log(region);
+
+      if (region) {
+        return (
+          country.region === region &&
+          country.name.common.toLowerCase().includes(searchInput.toLowerCase())
+        );
+      } else {
+        return country.name.common
+          .toLowerCase()
+          .includes(searchInput.toLowerCase());
+      }
     });
   }
 }

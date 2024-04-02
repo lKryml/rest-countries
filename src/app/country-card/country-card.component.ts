@@ -11,6 +11,7 @@ export class CountryCardComponent implements OnInit, OnDestroy {
   private subscription?: Subscription;
   constructor(private countryService: CountryService) {}
   searchValue: string = '';
+  regionValue: string = '';
   countries: any;
 
   ngOnInit(): void {
