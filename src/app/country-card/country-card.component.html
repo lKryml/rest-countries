@@ -13,7 +13,10 @@
   </select>
 </div>
 <div class="container">
-  <div class="card-container" *ngFor="let country of countries">
+  <div
+    class="card-container"
+    *ngFor="let country of countries | filter : searchValue"
+  >
     <img src="{{ country.flags.png }}" />
     <h2>{{ country.name.common }}</h2>
     <p>Population:{{ country.population }}</p>

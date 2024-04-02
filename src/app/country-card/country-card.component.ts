@@ -17,9 +17,9 @@ export class CountryCardComponent implements OnInit, OnDestroy {
     this.subscription = this.countryService.getData().subscribe((val: any) => {
       this.countries = val;
 
-      for (let c of this.countries) {
-        console.log(c.name.common);
-      }
+      // for (let c of this.countries) {
+      //   console.log(c.name.common);
+      // }
     });
   }
 
