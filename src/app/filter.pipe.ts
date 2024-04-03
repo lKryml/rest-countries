@@ -7,8 +7,6 @@ import Country from './country';
 export class FilterPipe implements PipeTransform {
   transform(data: Country[], searchInput: string, region: string): any {
     return data?.filter((country) => {
-      console.log(region);
-
       if (region) {
         return (
           country.region === region &&
