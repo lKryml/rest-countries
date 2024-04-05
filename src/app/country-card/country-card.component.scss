@@ -23,20 +23,32 @@ img {
 }
 
 input {
-  height: 30px;
-  padding-left: 25px;
-  box-shadow: 5px 5px 5px gray;
-  border: none;
+  // height: 30px;
+  // padding-left: 25px;
+  // box-shadow: 5px 5px 5px gray;
+  // border: none;
+  background-image: url(https://countries-app-e28a4.web.app/search.229392caf193207a.png);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: calc(0% + 20px) 50%;
+  padding: 20px 50px;
+  outline: 0;
+  width: 500px;
+  border: 0;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 9px #0000000d;
+  background-color: white;
 }
 .containerSearch {
   display: flex;
-  margin-bottom: 40px;
+  width: 85%;
   justify-content: space-between;
-  margin-top: 50px;
+  margin: 50px auto 40px auto;
 }
 select {
   width: 200px;
-  height: 30px;
+  height: 50px;
   padding-left: 25px;
   background: white;
   border: none;
