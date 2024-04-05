@@ -25,7 +25,7 @@ img {
 input {
   // height: 30px;
   // padding-left: 25px;
-  // box-shadow: 5px 5px 5px gray;
+
   // border: none;
   background-image: url(https://countries-app-e28a4.web.app/search.229392caf193207a.png);
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ input {
   border: 0;
   font-size: 1rem;
   border-radius: 6px;
-  box-shadow: 0 2px 9px #0000000d;
+  box-shadow: 8px 6px 9px #0000000d;
   background-color: white;
 }
 .containerSearch {
@@ -52,5 +52,6 @@ select {
   padding-left: 25px;
   background: white;
   border: none;
-  box-shadow: 5px 5px 5px gray;
+  border-radius: 5px;
+  box-shadow: 8px 6px 9px #0000000d;
 }
