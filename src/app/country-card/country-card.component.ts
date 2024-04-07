@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CountryService } from '../country.service';
 import { Subscription, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-country-card',
@@ -9,7 +10,7 @@ import { Subscription, of } from 'rxjs';
 })
 export class CountryCardComponent implements OnInit, OnDestroy {
   private subscription?: Subscription;
-  constructor(private countryService: CountryService) {}
+  constructor(private countryService: CountryService, private router: Router) {}
   searchValue: string = '';
   regionValue: string = '';
   countries: any;
@@ -28,5 +29,8 @@ export class CountryCardComponent implements OnInit, OnDestroy {
     if (this.subscription) {
       this.subscription.unsubscribe();
     }
+  }
+  nav(name: string): void {
+    this.router.navigate(['/details', name]);
   }
 }
