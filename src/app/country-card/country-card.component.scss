@@ -8,8 +8,9 @@ img {
 .card-container {
   width: 320px;
   height: 370px;
-  border: 1px solid gray;
+  border-radius: 10px;
   box-sizing: border-box;
+  box-shadow: 8px 6px 9px #0000000d;
   overflow: hidden;
 }
 
