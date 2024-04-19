@@ -4,7 +4,10 @@ img {
   align-self: flex-start;
   object-fit: fill;
 }
-
+h2,
+p {
+  margin-left: 15px;
+}
 .card-container {
   width: 320px;
   height: 340px;
