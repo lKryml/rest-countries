@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { CountryService } from '../country.service';
 import Country from '../country';
 import { Subscription, take } from 'rxjs';
+
 @Component({
   selector: 'app-country-details',
   templateUrl: './country-details.component.html',
@@ -13,6 +14,7 @@ export class CountryDetailsComponent implements OnInit, OnDestroy {
   country!: Country;
   currency: any;
   nativeName: any;
+
   private subscription?: Subscription;
   constructor(private countryService: CountryService) {}
   ngOnInit(): void {

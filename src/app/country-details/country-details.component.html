@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <div *ngIf="country">
-  <button [routerLink]="'/'">Back</button>
+  <button [routerLink]="'/'"><i class="fas fa-arrow-left-long"></i>Back</button>
   <div class="container">
     <img [src]="country.flags.png" />
     <div class="info-container">

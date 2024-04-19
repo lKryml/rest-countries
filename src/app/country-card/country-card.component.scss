@@ -10,7 +10,7 @@ img {
   height: 340px;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 8px 6px 9px #0000000d;
+  box-shadow: 6px 6px 9px #0000000d;
   overflow: hidden;
   cursor: pointer;
 }
@@ -52,4 +52,7 @@ select {
   border: none;
   border-radius: 5px;
   box-shadow: 8px 6px 9px #0000000d;
+}
+span {
+  font-weight: bold;
 }

@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CountryDetailsComponent } from './country-details/country-details.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FilterPipe } from './filter.pipe';
     MatSlideToggleModule,
     HttpClientModule,
     FormsModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
